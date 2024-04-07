@@ -12,9 +12,9 @@ This application aims to facilitate the recognition of a potential assailant by 
 
 When launching FELON FINDER, four randomly selected images from our database (celebA dataset) are presented to the user.
 
-The user selects the most similar images. They can choose one to four photos each time.
+The user selects the most similar images. They can choose from one to four photos each time.
 
-The selected images are then processed to produce four new composite sketches that increasingly resemble the assailant.
+By clicking on the "Valider" button, the selected images are then processed to produce four new composite sketches that increasingly resemble the assailant.
 
 Once the user has identified a suitable sketch, they can save the image.
 
