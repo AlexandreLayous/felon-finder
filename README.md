@@ -3,6 +3,7 @@
 This application aims to facilitate the recognition of a potential assailant by producing composite sketches.
 
 ### Principle :
+***
 
 When launching FELON FINDER, four randomly selected images from our database (celebA dataset) are presented to the user.
 
@@ -15,10 +16,12 @@ Once the user has identified a suitable sketch, they can save the image.
 The software is currently only available in French.
 
 ### Installation :
+***
 
 WIP
 
 ### Q&A :
+***
 
 - I selected the wrong images. How can I go back ?
 
