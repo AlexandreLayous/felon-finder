@@ -2,7 +2,12 @@
 
 This application aims to facilitate the recognition of a potential assailant by producing composite sketches.
 
-### Principle :
+## Table of contents
+* [General info](#general-info)
+* [Installation](#installation)
+* [Q&A](#Q&A)
+
+### General info :
 ***
 
 When launching FELON FINDER, four randomly selected images from our database (celebA dataset) are presented to the user.
