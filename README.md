@@ -3,9 +3,9 @@
 This application aims to facilitate the recognition of a potential assailant by producing composite sketches.
 
 ## Table of contents
-* [General info](#general-info)
-* [Installation](#installation)
-* [Q&A](#Q&A)
+* [General info](#general-info-)
+* [Installation](#installation-)
+* [Q&A](#qa-)
 
 ### General info :
 ***
