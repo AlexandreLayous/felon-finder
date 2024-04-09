@@ -6,7 +6,7 @@ This application aims to facilitate the recognition of a potential assailant by 
 * [General info](#general-info-)
 * [Installation](#installation-)
 * [Q&A](#qa-)
-* 
+* [Documentation](#documentation-)
 
 ### General info :
 ***
