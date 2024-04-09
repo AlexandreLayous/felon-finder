@@ -1,0 +1,31 @@
+.. Felon Finder documentation master file, created by
+   sphinx-quickstart on Tue Apr  9 01:06:56 2024.
+   You can adapt this file completely to your liking, but it should at least
+   contain the root `toctree` directive.
+
+Felon Finder's documentation
+============================
+
+**Welcome to Felon Finder's documentation !**
+
+| Felon Finder aims to facilitate the recognition of a potential assailant by producing composite sketches.
+| Here, you will find the API reference for the public functions used in the software.
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Quick start
+
+   quickstartguide
+
+.. toctree::
+   :maxdepth: 2
+   :caption: Documentation
+   
+   modules
+
+
+Indices and tables
+==================
+
+* :ref:`genindex`
+* :ref:`modindex`

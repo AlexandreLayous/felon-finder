@@ -1,0 +1,72 @@
+Quick start guide
+=================
+
+How to install and use the software
+-----------------------------------
+
+In order to install Felon Finder and launch, multiple ways are possible.
+
+.. contents:: List of possible methods
+   :depth: 1
+   :local:
+   :backlinks: none
+
+Method 1 - Using the installer
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+**Windows**
+
+| `FelonFinder_WIN_x64_setup.exe <https://mega.nz/file/WqpwXLJA#ZB9scKeus0Q8n7NazQAzil0lMsszJEYG-sLESxlg6zY>`_
+| Simply execute the setup and you will be able to open the software on the go.
+
+**Linux**
+
+| `Felon-Finder.deb <https://mega.nz/file/6nIQjY5b#NDvn5pGsyfHgSv_mLno5mF9Statr6tozO5qahtbECi0>`_
+| You can double click on the package with a GUI or use ``dpkg -i Felon-Finder.deb`` to unpack it.
+
+Method 2 - pip
+^^^^^^^^^^^^^^
+
+Install the ``felon_finder`` package from your terminal :
+
+.. code:: console
+
+    $ pip install felon_finder
+
+Method 3 - conda environment
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+| 1) Clone the ``felon_finder`` repository from GitHub directly from your terminal :
+
+.. code:: console
+
+    $ git clone https://github.com/AlexandreLayous/felon-finder.git
+    $ cd felon-finder
+
+or, with SSH :
+
+.. code:: console
+
+    $ git clone git@github.com:AlexandreLayous/felon-finder.git
+    $ cd felon-finder
+
+| 2) Then, create a conda environment with the adequate requirements.
+| If you operate under a windows OS :
+
+.. code:: console
+
+    $ conda create --name felon-finder python=3.12.2
+    $ pip install -r requirements_win.txt
+
+If you operate under a linux OS :
+
+.. code:: console
+
+    $ conda create --name felon-finder python=3.12.2
+    $ pip install -r requirements_linux.txt
+
+| 3) You can then run Felon Finder by typing this command line in your terminal :
+
+.. code:: console
+
+    $ python src/FelonFinder.py

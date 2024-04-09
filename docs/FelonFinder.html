@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FelonFinder module &mdash; Felon Finder 0.5 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=db78e746"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="VAE module" href="VAE.html" />
+    <link rel="prev" title="Modules" href="modules.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Felon Finder
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Quick start</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="quickstartguide.html">Quick start guide</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Documentation</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">Modules</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">FelonFinder module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#FelonFinder.MainScreen"><code class="docutils literal notranslate"><span class="pre">MainScreen</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#FelonFinder.MainScreen.add_image_to_showed_list"><code class="docutils literal notranslate"><span class="pre">MainScreen.add_image_to_showed_list()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#FelonFinder.MainScreen.back_to_last_images"><code class="docutils literal notranslate"><span class="pre">MainScreen.back_to_last_images()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#FelonFinder.MainScreen.check_validation"><code class="docutils literal notranslate"><span class="pre">MainScreen.check_validation()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#FelonFinder.MainScreen.close_window"><code class="docutils literal notranslate"><span class="pre">MainScreen.close_window()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#FelonFinder.MainScreen.get_random_images"><code class="docutils literal notranslate"><span class="pre">MainScreen.get_random_images()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#FelonFinder.MainScreen.options_window"><code class="docutils literal notranslate"><span class="pre">MainScreen.options_window()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#FelonFinder.MainScreen.refresh"><code class="docutils literal notranslate"><span class="pre">MainScreen.refresh()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#FelonFinder.MainScreen.reset_ref"><code class="docutils literal notranslate"><span class="pre">MainScreen.reset_ref()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#FelonFinder.MainScreen.save_images"><code class="docutils literal notranslate"><span class="pre">MainScreen.save_images()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#FelonFinder.MainScreen.select_image"><code class="docutils literal notranslate"><span class="pre">MainScreen.select_image()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#FelonFinder.MainScreen.tutorial_window"><code class="docutils literal notranslate"><span class="pre">MainScreen.tutorial_window()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#FelonFinder.MainScreen.update_images"><code class="docutils literal notranslate"><span class="pre">MainScreen.update_images()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#FelonFinder.MainScreen.update_label"><code class="docutils literal notranslate"><span class="pre">MainScreen.update_label()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#FelonFinder.Options"><code class="docutils literal notranslate"><span class="pre">Options</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#FelonFinder.Options.about"><code class="docutils literal notranslate"><span class="pre">Options.about()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#FelonFinder.Options.cancel_changes"><code class="docutils literal notranslate"><span class="pre">Options.cancel_changes()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#FelonFinder.Options.reset_config"><code class="docutils literal notranslate"><span class="pre">Options.reset_config()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#FelonFinder.Options.slider1"><code class="docutils literal notranslate"><span class="pre">Options.slider1()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#FelonFinder.Options.slider2"><code class="docutils literal notranslate"><span class="pre">Options.slider2()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#FelonFinder.Options.switch_event"><code class="docutils literal notranslate"><span class="pre">Options.switch_event()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#FelonFinder.Options.validate_params"><code class="docutils literal notranslate"><span class="pre">Options.validate_params()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#FelonFinder.SplashScreen"><code class="docutils literal notranslate"><span class="pre">SplashScreen</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#FelonFinder.SplashScreen.loading"><code class="docutils literal notranslate"><span class="pre">SplashScreen.loading()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#FelonFinder.Tutorial"><code class="docutils literal notranslate"><span class="pre">Tutorial</span></code></a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#FelonFinder.Tutorial.callback"><code class="docutils literal notranslate"><span class="pre">Tutorial.callback()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#FelonFinder.Tutorial.cancel_link_underline"><code class="docutils literal notranslate"><span class="pre">Tutorial.cancel_link_underline()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#FelonFinder.Tutorial.close_window"><code class="docutils literal notranslate"><span class="pre">Tutorial.close_window()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#FelonFinder.Tutorial.underline_and_darken_link"><code class="docutils literal notranslate"><span class="pre">Tutorial.underline_and_darken_link()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#FelonFinder.center_window_on_screen"><code class="docutils literal notranslate"><span class="pre">center_window_on_screen()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#FelonFinder.create_root_closing_handler"><code class="docutils literal notranslate"><span class="pre">create_root_closing_handler()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#FelonFinder.main"><code class="docutils literal notranslate"><span class="pre">main()</span></code></a></li>
+<li class="toctree-l3"><a class="reference internal" href="#FelonFinder.resource_path"><code class="docutils literal notranslate"><span class="pre">resource_path()</span></code></a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="VAE.html">VAE module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="algogen.html">algogen module</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Felon Finder</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="modules.html">Modules</a></li>
+      <li class="breadcrumb-item active">FelonFinder module</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="felonfinder-module">
+<h1>FelonFinder module<a class="headerlink" href="#felonfinder-module" title="Link to this heading"></a></h1>
+<p>This module contains the whole graphical interface. This is truly the face of Felon Finder.</p>
+<dl class="py class" id="module-FelonFinder">
+<dt class="sig sig-object py" id="FelonFinder.MainScreen">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">FelonFinder.</span></span><span class="sig-name descname"><span class="pre">MainScreen</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">master</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/FelonFinder.html#MainScreen"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#FelonFinder.MainScreen" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>This class contains the main window of the program.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="FelonFinder.MainScreen.add_image_to_showed_list">
+<span class="sig-name descname"><span class="pre">add_image_to_showed_list</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/FelonFinder.html#MainScreen.add_image_to_showed_list"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#FelonFinder.MainScreen.add_image_to_showed_list" title="Link to this definition"></a></dt>
+<dd><p>This function keeps the given image in memory through an array.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>image</strong> – Image to keep in memory</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="FelonFinder.MainScreen.back_to_last_images">
+<span class="sig-name descname"><span class="pre">back_to_last_images</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/FelonFinder.html#MainScreen.back_to_last_images"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#FelonFinder.MainScreen.back_to_last_images" title="Link to this definition"></a></dt>
+<dd><p>This function removes the last showed images and changes the buttons to make them show to the ones before that. The reference list is also emptied.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="FelonFinder.MainScreen.check_validation">
+<span class="sig-name descname"><span class="pre">check_validation</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/FelonFinder.html#MainScreen.check_validation"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#FelonFinder.MainScreen.check_validation" title="Link to this definition"></a></dt>
+<dd><p>This function applies the VAE and the genetic algorithm to the selected images and shows the decoded results in the buttons. The selected images are then kept in reference.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="FelonFinder.MainScreen.close_window">
+<span class="sig-name descname"><span class="pre">close_window</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/FelonFinder.html#MainScreen.close_window"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#FelonFinder.MainScreen.close_window" title="Link to this definition"></a></dt>
+<dd><p>This function asks for the user’s confirmation to close the program.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="FelonFinder.MainScreen.get_random_images">
+<span class="sig-name descname"><span class="pre">get_random_images</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/FelonFinder.html#MainScreen.get_random_images"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#FelonFinder.MainScreen.get_random_images" title="Link to this definition"></a></dt>
+<dd><p>This function gets random pictures from the database after the user clicked on “Nouvelles photos”</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="FelonFinder.MainScreen.options_window">
+<span class="sig-name descname"><span class="pre">options_window</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/FelonFinder.html#MainScreen.options_window"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#FelonFinder.MainScreen.options_window" title="Link to this definition"></a></dt>
+<dd><p>This function launches the options window or shows it if it was behind.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="FelonFinder.MainScreen.refresh">
+<span class="sig-name descname"><span class="pre">refresh</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/FelonFinder.html#MainScreen.refresh"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#FelonFinder.MainScreen.refresh" title="Link to this definition"></a></dt>
+<dd><p>This function applies again the VAE and the genetic algorithm to the previously selected and treated images and shows the decoded results in the buttons. The selected images are still kept in reference.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="FelonFinder.MainScreen.reset_ref">
+<span class="sig-name descname"><span class="pre">reset_ref</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/FelonFinder.html#MainScreen.reset_ref"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#FelonFinder.MainScreen.reset_ref" title="Link to this definition"></a></dt>
+<dd><p>This function clears the reference images array and puts back unknown.png faces in the reference labels.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="FelonFinder.MainScreen.save_images">
+<span class="sig-name descname"><span class="pre">save_images</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/FelonFinder.html#MainScreen.save_images"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#FelonFinder.MainScreen.save_images" title="Link to this definition"></a></dt>
+<dd><p>This function saves the selected pictures in root/img/saved.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="FelonFinder.MainScreen.select_image">
+<span class="sig-name descname"><span class="pre">select_image</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">image</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/FelonFinder.html#MainScreen.select_image"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#FelonFinder.MainScreen.select_image" title="Link to this definition"></a></dt>
+<dd><p>This function turns the buttons red or blue and their hover color to darker red or darker blue according to if they were selected or un-selected by the user.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>image</strong> – The selected image</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="FelonFinder.MainScreen.tutorial_window">
+<span class="sig-name descname"><span class="pre">tutorial_window</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/FelonFinder.html#MainScreen.tutorial_window"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#FelonFinder.MainScreen.tutorial_window" title="Link to this definition"></a></dt>
+<dd><p>This function launches the tutorial window or shows it if it was behind.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="FelonFinder.MainScreen.update_images">
+<span class="sig-name descname"><span class="pre">update_images</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">images_list</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/FelonFinder.html#MainScreen.update_images"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#FelonFinder.MainScreen.update_images" title="Link to this definition"></a></dt>
+<dd><p>This function updates the showed images to keep track of the images in the main buttons.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>images_list</strong> – An array of the new images to show</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="FelonFinder.MainScreen.update_label">
+<span class="sig-name descname"><span class="pre">update_label</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/FelonFinder.html#MainScreen.update_label"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#FelonFinder.MainScreen.update_label" title="Link to this definition"></a></dt>
+<dd><p>This function updates the labels to keep the user aware of the amount of images selected and help them choose their next action.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="FelonFinder.Options">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">FelonFinder.</span></span><span class="sig-name descname"><span class="pre">Options</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">master</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/FelonFinder.html#Options"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#FelonFinder.Options" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>This class contains the options menu of the program. Once it is launched, the main window of the program is disabled to avoid mistakes.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="FelonFinder.Options.about">
+<span class="sig-name descname"><span class="pre">about</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/FelonFinder.html#Options.about"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#FelonFinder.Options.about" title="Link to this definition"></a></dt>
+<dd><p>This function opens a pop-up message with the authors and specials thanks.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="FelonFinder.Options.cancel_changes">
+<span class="sig-name descname"><span class="pre">cancel_changes</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/FelonFinder.html#Options.cancel_changes"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#FelonFinder.Options.cancel_changes" title="Link to this definition"></a></dt>
+<dd><p>This function cancels the changes that happened in the options menu when the user clicks on “Annuler” or closes the options window.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>config</strong> – Configuration file used to come back to the previous values</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="FelonFinder.Options.reset_config">
+<span class="sig-name descname"><span class="pre">reset_config</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/FelonFinder.html#Options.reset_config"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#FelonFinder.Options.reset_config" title="Link to this definition"></a></dt>
+<dd><p>This function reinitializes the parameters to the very first ones, according to the [initial] section of the config.ini file.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>config</strong> – Configuration file used to read the initial parameters.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="FelonFinder.Options.slider1">
+<span class="sig-name descname"><span class="pre">slider1</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/FelonFinder.html#Options.slider1"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#FelonFinder.Options.slider1" title="Link to this definition"></a></dt>
+<dd><p>This function changes the value showed above the mean slider according to where the cursor is.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>value</strong> – Value of the cursor</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="FelonFinder.Options.slider2">
+<span class="sig-name descname"><span class="pre">slider2</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/FelonFinder.html#Options.slider2"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#FelonFinder.Options.slider2" title="Link to this definition"></a></dt>
+<dd><p>This function changes the value showed above the variance slider according to where the cursor is.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>value</strong> – Value of the cursor</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="FelonFinder.Options.switch_event">
+<span class="sig-name descname"><span class="pre">switch_event</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/FelonFinder.html#Options.switch_event"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#FelonFinder.Options.switch_event" title="Link to this definition"></a></dt>
+<dd><p>This function changes the mode to light if it was dark, or dark if it was light.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="FelonFinder.Options.validate_params">
+<span class="sig-name descname"><span class="pre">validate_params</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/FelonFinder.html#Options.validate_params"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#FelonFinder.Options.validate_params" title="Link to this definition"></a></dt>
+<dd><p>This function writes the parameters entered by the user in the config file, section [current], which validates them and uses them for the rest of the execution and the other executions.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>config</strong> – Configuration file used to write the parameters</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="FelonFinder.SplashScreen">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">FelonFinder.</span></span><span class="sig-name descname"><span class="pre">SplashScreen</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">master</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/FelonFinder.html#SplashScreen"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#FelonFinder.SplashScreen" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>This class contains the splash screen for the project and the loading for the main window.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="FelonFinder.SplashScreen.loading">
+<span class="sig-name descname"><span class="pre">loading</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/FelonFinder.html#SplashScreen.loading"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#FelonFinder.SplashScreen.loading" title="Link to this definition"></a></dt>
+<dd><p>This function loads the time and resource consuming for the main program before showing the main window.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="FelonFinder.Tutorial">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">FelonFinder.</span></span><span class="sig-name descname"><span class="pre">Tutorial</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">master</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/FelonFinder.html#Tutorial"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#FelonFinder.Tutorial" title="Link to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>This class contains the tutorial window with a link to the github repository of the project.</p>
+<dl class="py method">
+<dt class="sig sig-object py" id="FelonFinder.Tutorial.callback">
+<span class="sig-name descname"><span class="pre">callback</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">url</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/FelonFinder.html#Tutorial.callback"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#FelonFinder.Tutorial.callback" title="Link to this definition"></a></dt>
+<dd><p>This function opens a new tab in the user’s web browser to the github repository of the project.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>url</strong> – Link of the github repository</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="FelonFinder.Tutorial.cancel_link_underline">
+<span class="sig-name descname"><span class="pre">cancel_link_underline</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/FelonFinder.html#Tutorial.cancel_link_underline"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#FelonFinder.Tutorial.cancel_link_underline" title="Link to this definition"></a></dt>
+<dd><p>This function removes the underlining and makes the link label a bit brighter when the user stops hovering over it.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="FelonFinder.Tutorial.close_window">
+<span class="sig-name descname"><span class="pre">close_window</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/FelonFinder.html#Tutorial.close_window"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#FelonFinder.Tutorial.close_window" title="Link to this definition"></a></dt>
+<dd><p>This function closes the window.</p>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="FelonFinder.Tutorial.underline_and_darken_link">
+<span class="sig-name descname"><span class="pre">underline_and_darken_link</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/FelonFinder.html#Tutorial.underline_and_darken_link"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#FelonFinder.Tutorial.underline_and_darken_link" title="Link to this definition"></a></dt>
+<dd><p>This function underlines and darkens the link label when the user hovers over it.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="FelonFinder.center_window_on_screen">
+<span class="sig-prename descclassname"><span class="pre">FelonFinder.</span></span><span class="sig-name descname"><span class="pre">center_window_on_screen</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">window</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">width</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">height</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/FelonFinder.html#center_window_on_screen"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#FelonFinder.center_window_on_screen" title="Link to this definition"></a></dt>
+<dd><p>This function centers the given window on the screen with the given width and height.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>window</strong> – Window to be centered</p></li>
+<li><p><strong>width</strong> – Width to be given to the window</p></li>
+<li><p><strong>height</strong> – Height to be given to the window</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="FelonFinder.create_root_closing_handler">
+<span class="sig-prename descclassname"><span class="pre">FelonFinder.</span></span><span class="sig-name descname"><span class="pre">create_root_closing_handler</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">root</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/FelonFinder.html#create_root_closing_handler"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#FelonFinder.create_root_closing_handler" title="Link to this definition"></a></dt>
+<dd><p>This function asks for the user’s confirmation to close the program.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>root</strong> – Main window of the program.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="FelonFinder.main">
+<span class="sig-prename descclassname"><span class="pre">FelonFinder.</span></span><span class="sig-name descname"><span class="pre">main</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/FelonFinder.html#main"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#FelonFinder.main" title="Link to this definition"></a></dt>
+<dd><p>This function launches the loading splash screen for the program.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="FelonFinder.resource_path">
+<span class="sig-prename descclassname"><span class="pre">FelonFinder.</span></span><span class="sig-name descname"><span class="pre">resource_path</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">relative_path</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="_modules/FelonFinder.html#resource_path"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#FelonFinder.resource_path" title="Link to this definition"></a></dt>
+<dd><p>This function wraps a relative path with sys._MEIPASS2 to help with the assets.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>relative_path</strong> – Relative os.path-like path from the root of the project</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The wrapped path for a relative file or folder.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="modules.html" class="btn btn-neutral float-left" title="Modules" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="VAE.html" class="btn btn-neutral float-right" title="VAE module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Alexandre Layous, Chada Salek and Audrey Zarkua.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
