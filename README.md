@@ -6,6 +6,7 @@ This application aims to facilitate the recognition of a potential assailant by 
 * [General info](#general-info-)
 * [Installation](#installation-)
 * [Q&A](#qa-)
+* 
 
 ### General info :
 ***
@@ -24,6 +25,11 @@ The software is currently only available in French.
 ***
 
 WIP
+
+### Documentation :
+***
+
+[Read the documentation](https://alexandrelayous.github.io/felon-finder/)
 
 ### Q&A :
 ***
