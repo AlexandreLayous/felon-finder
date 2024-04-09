@@ -5,8 +5,8 @@ This application aims to facilitate the recognition of a potential assailant by 
 ## Table of contents
 * [General info](#general-info-)
 * [Installation](#installation-)
-* [Q&A](#qa-)
 * [Documentation](#documentation-)
+* [Q&A](#qa-)
 
 ### General info :
 ***
