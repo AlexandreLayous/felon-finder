@@ -1,8 +1,0 @@
-VAE module
-==========
-This module contains the whole implementation of Felon Finder's keras variational autoencoder. This is truly part of the heart of Felon Finder.
-
-.. automodule:: VAE
-   :members:
-   :undoc-members:
-   :show-inheritance:
