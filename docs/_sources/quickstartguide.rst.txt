@@ -1,0 +1,190 @@
+Quick start guide
+=================
+
+How to install and use the software
+-----------------------------------
+
+In order to install Felon Finder and launch, multiple ways are possible.
+
+.. contents:: List of possible methods
+   :depth: 1
+   :local:
+   :backlinks: none
+
+Method 1 - Using the installer
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+**Windows**
+
+| `FelonFinder_WIN_x64_setup.exe <https://mega.nz/file/WqpwXLJA#ZB9scKeus0Q8n7NazQAzil0lMsszJEYG-sLESxlg6zY>`_
+| Simply execute the setup and you will be able to open the software on the go.
+
+**Linux**
+
+| `Felon-Finder.deb <https://mega.nz/file/6nIQjY5b#NDvn5pGsyfHgSv_mLno5mF9Statr6tozO5qahtbECi0>`_
+| You can double click on the package with a GUI or use ``dpkg -i Felon-Finder.deb`` to unpack it and run it once it's over.
+
+Method 2 - conda environment + GitHub clone
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+| Felon Finder is almost ready to launch once you clone the `GitHub repository <https://github.com/AlexandreLayous/felon-finder>`_.
+
+| 1) In order to clone the repo, you can proceed with the method of your choice. For instance, with *SSH*, you can type the next commands in your command-line terminal :
+
+.. code:: console
+
+    $ git clone git@github.com:AlexandreLayous/felon-finder.git
+    $ cd felon-finder
+
+| 2) The next step is to **download the model** for the autoencoder from `this mega.nz link <https://mega.nz/file/3ugxgCLJ#74M6kIoyRPdf0SIFeNGPF4kr4vzezE-MnJwNp0YHWHc>`_ and **place it where it belongs**, which corresponds to the empty ``saved_model`` folder.
+
+| Once you moved the model ``felon_finder_vae.weights.h5`` in ``felon-finder/saved_model``, your workspace just needs a little more configuration.
+
+| 3) Create a conda environment with the adequate Python version.
+| Whether you operate under Windows or Linux, enter this command in your terminal :
+
+.. code:: console
+
+    $ conda create --name felon-finder python=3.12.2
+
+.. warning::
+    
+    If for some reason you feel lost at this first step, we strongly recommend `installing Miniconda <https://docs.anaconda.com/free/miniconda/>`_ and `getting started with this tutorial <https://conda.io/projects/conda/en/latest/user-guide/getting-started.html>`_.
+
+| 4) Activate your conda environment with the following command :
+
+.. code:: console
+
+    $ conda activate felon-finder
+
+| 5) Install the librairies required with the following command :
+
+| **Linux**
+
+.. code:: console
+
+    $ pip install -r requirements_linux.txt
+
+| **Windows**
+
+.. code:: console
+
+    $ pip install -r requirements_win.txt
+
+| 6) You can then type the next command in your command-line terminal to run the software :
+
+.. code:: console
+
+    $ python FelonFinder.py
+
+.. note::
+
+    Once this setup has been done for the first time, you shouldn't have to do it again unless you delete your conda environment or the files needed.
+
+    You will just have to activate the conda environment every time before running the software.
+
+Method 3 - conda environment + pip 
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+| 1) First, create a conda environment with the adequate Python version.
+| Whether you operate under Windows or Linux, enter this command in your terminal :
+
+.. code:: console
+
+    $ conda create --name felon-finder python=3.12.2
+
+.. warning::
+    
+    If for some reason you feel lost at this first step, we strongly recommend `installing Miniconda <https://docs.anaconda.com/free/miniconda/>`_ and `getting started with this tutorial <https://conda.io/projects/conda/en/latest/user-guide/getting-started.html>`_.
+
+| 2) The next step is to activate your conda environment with the following command :
+
+.. code:: console
+
+    $ conda activate felon-finder
+
+| 3) Once the environement is activated, please install the ``felonfinder`` package and its dependencies with pip from your terminal :
+
+| **Linux**
+
+.. code:: console
+
+    $ pip install felonfinder
+
+| **Windows**
+
+.. code:: console
+
+    $ pip install felonfinder[windows]
+
+.. note::
+
+    Windows operated computers need one more dependency to work with the ``tensorflow`` package.
+
+| 4) Now, you need to **download the model** for the autoencoder from `this mega.nz link <https://mega.nz/file/3ugxgCLJ#74M6kIoyRPdf0SIFeNGPF4kr4vzezE-MnJwNp0YHWHc>`_ and **place it where it belongs**.
+
+| You have to find the directory where felon-finder was installed. In order to do this, you can type the following command :
+
+| **Linux**
+
+.. code:: console
+
+    $ which python
+
+| **Windows**
+
+.. code:: console
+
+    $ where python
+
+| According to your OS, you might get something like this :
+| ``/home/your_name/miniconda3/envs/felon-finder/bin/python``
+| Or maybe this :
+| ``your_disk:\Users\your_name\miniconda3\envs\felon-finder\python.exe``.
+
+| **Forget everything after felon-finder/**. We will focus on felon-finder itself.
+| Use the following commands to **navigate and create a directory in this folder** :
+
+| **Windows**
+
+.. code:: console
+
+    $ cd your_disk\path\until\envs\felon-finder\Lib\felonfinder
+    $ mkdir saved_model
+
+| **Linux**
+
+.. code:: console
+
+    $ cd /path/until/envs/felon-finder/lib/felonfinder
+    $ mkdir saved_model
+
+.. note::
+
+    Be aware of the slashes ! They're slashes in Linux but backslashes in Windows.
+
+| **Congratulations !** Now, you only have to put the downloaded model in this folder and you are ready to go.
+
+| 5) You can now run Felon Finder by typing this command line in your terminal :
+
+| **Linux**
+
+.. code:: console
+
+    $ felon-finder
+
+| **Windows**
+
+.. code:: console
+
+    $ felon-finder-win
+
+.. warning::
+
+    Unlike its pip package, the actual Felon Finder executable contains dashes in its name !
+
+.. note::
+
+    Once this setup has been done for the first time, you shouldn't have to do it again unless you delete your conda environment or the files needed.
+
+    You will just have to activate the conda environment every time before running the software.

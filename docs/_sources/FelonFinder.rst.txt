@@ -1,0 +1,8 @@
+FelonFinder module
+==================
+This module contains the whole graphical interface. This is truly the face of Felon Finder.
+
+.. automodule:: FelonFinder
+   :members:
+   :undoc-members:
+   :show-inheritance:
