@@ -1,0 +1,8 @@
+varencoder module
+=================
+This module contains the whole implementation of Felon Finder's variational autoencoder. This is truly part of the heart of Felon Finder.
+
+.. automodule:: varencoder
+   :members:
+   :undoc-members:
+   :show-inheritance:
