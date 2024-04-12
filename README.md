@@ -1,6 +1,9 @@
 # Felon Finder
 
-This application aims to facilitate the recognition of a potential assailant by producing composite sketches.
+<p align="center">
+  <img width="600" height="400" src="https://raw.githubusercontent.com/AlexandreLayous/felon-finder/main/docs/_images/felon_finder_screenshot.png"></br>
+  This application aims to facilitate the recognition of a potential assailant by producing composite sketches.
+</p>
 
 ## Table of contents
 * [General info](#general-info-)
