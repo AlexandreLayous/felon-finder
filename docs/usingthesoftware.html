@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Using the software &mdash; Felon Finder 0.5 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=80d5e7a1" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=19f00094" />
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=db78e746"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Modules" href="modules.html" />
+    <link rel="prev" title="Installation guide" href="quickstartguide.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="index.html" class="icon icon-home">
+            Felon Finder
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Quick start</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="quickstartguide.html">Installation guide</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Using the software</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#general-use">General use</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#selecting-images-and-letting-the-algorithm-do-its-magic">Selecting images and letting the algorithm do its magic</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#saving-one-or-more-images">Saving one or more images</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#back-tracking">Back-tracking</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#changing-the-parameters">Changing the parameters</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#advanced-feature-filtre">Advanced feature: “Filtre”</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#what-is-a-filtre-and-why-use-one">What is a “Filtre” and why use one ?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#first-example-the-sourire-filtre">First example : the <em>sourire</em> “Filtre”</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#second-example-the-longs-cheveux-bruns-filtre">Second example : the <em>longs cheveux bruns</em> “Filtre”</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-to-get-to-create-your-own-filtre">How to get to create your own “Filtre” ?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#in-depth-filtre-constructions-steps">In-depth “Filtre” constructions steps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-to-apply-a-filtre-on-the-generated-images">How to apply a “Filtre” on the generated images ?</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#non-exhaustive-list-of-questions">Non-exhaustive list of questions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#does-felon-finder-guarantee-100-accurate-identification-of-an-assailant">Does Felon Finder guarantee 100% accurate identification of an assailant ?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#how-are-the-composite-sketches-produced">How are the composite sketches produced ?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#i-found-my-assailant">I found my assailant !</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#can-i-apply-the-modifications-to-more-than-one-picture">Can I apply the modifications to more than one picture ?</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">Documentation</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">Modules</a></li>
+</ul>
+<p class="caption" role="heading"><span class="caption-text">About</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="contact.html">Contact</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Felon Finder</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Using the software</li>
+      <li class="wy-breadcrumbs-aside">
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="using-the-software">
+<h1>Using the software<a class="headerlink" href="#using-the-software" title="Link to this heading"></a></h1>
+<section id="general-use">
+<h2>General use<a class="headerlink" href="#general-use" title="Link to this heading"></a></h2>
+<div class="line-block">
+<div class="line">Felon Finder aims to facilitate the recognition of a potential assailant by producing composite sketches.</div>
+<div class="line">There are various ways to use it.</div>
+</div>
+<nav class="contents local" id="basic-things-you-can-do">
+<p class="topic-title">Basic things you can do</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#selecting-images-and-letting-the-algorithm-do-its-magic" id="id5">Selecting images and letting the algorithm do its magic</a></p></li>
+<li><p><a class="reference internal" href="#saving-one-or-more-images" id="id6">Saving one or more images</a></p></li>
+<li><p><a class="reference internal" href="#back-tracking" id="id7">Back-tracking</a></p></li>
+<li><p><a class="reference internal" href="#changing-the-parameters" id="id8">Changing the parameters</a></p></li>
+</ul>
+</nav>
+<section id="selecting-images-and-letting-the-algorithm-do-its-magic">
+<h3>Selecting images and letting the algorithm do its magic<a class="headerlink" href="#selecting-images-and-letting-the-algorithm-do-its-magic" title="Link to this heading"></a></h3>
+<p>The first intent of Felon Finder is to let you find a composite sketch of a potential assailant according to what you remember.</p>
+<p>The most important function of Felon Finder is its algorithm: you only have to get random images until you get to someone that looks like the potential assailant. Once you get there, you can select one or more pictures that correpond to this person and validate your choice.</p>
+<a class="reference internal image-reference" href="_images/select_picture.png"><img alt="_images/select_picture.png" src="_images/select_picture.png" style="width: 400px;" /></a>
+<p>Not satisfied yet ? You can use the button “Rafraîchir” to keep reusing the algorithm on the same reference picture, in case the randomness did not please you enough.</p>
+<a class="reference internal image-reference" href="_images/refresh_pictures.png"><img alt="_images/refresh_pictures.png" src="_images/refresh_pictures.png" style="width: 400px;" /></a>
+</section>
+<section id="saving-one-or-more-images">
+<h3>Saving one or more images<a class="headerlink" href="#saving-one-or-more-images" title="Link to this heading"></a></h3>
+<p>Once you are happy with one or more of the showed pictures, you can save them in a path you choose yourself (everything is made simple through the software, don’t worry !).</p>
+<a class="reference internal image-reference" href="_images/save_picture_1.png"><img alt="_images/save_picture_1.png" src="_images/save_picture_1.png" style="width: 400px;" /></a>
+<p>Then :</p>
+<a class="reference internal image-reference" href="_images/save_picture_2.png"><img alt="_images/save_picture_2.png" src="_images/save_picture_2.png" style="width: 400px;" /></a>
+<p>Note that you always can change the path where your images are saved through the “Paramètres” menu, doing so :</p>
+<a class="reference internal image-reference" href="_images/change_path.png"><img alt="_images/change_path.png" src="_images/change_path.png" style="width: 400px;" /></a>
+</section>
+<section id="back-tracking">
+<h3>Back-tracking<a class="headerlink" href="#back-tracking" title="Link to this heading"></a></h3>
+<p>If you realize you went to fast through the pictures, you always can come back to the last you saw. You can do this with the “Photos précédentes” button.</p>
+<a class="reference internal image-reference" href="_images/back_button.png"><img alt="_images/back_button.png" src="_images/back_button.png" style="width: 400px;" /></a>
+<p>You can even come back to the very first pictures !</p>
+<a class="reference internal image-reference" href="_images/back_to_beginning.png"><img alt="_images/back_to_beginning.png" src="_images/back_to_beginning.png" style="width: 400px;" /></a>
+</section>
+<section id="changing-the-parameters">
+<h3>Changing the parameters<a class="headerlink" href="#changing-the-parameters" title="Link to this heading"></a></h3>
+<p>Whether you want to tweak the parameters for fun, want to experiment with a higher variance for the algorithm, or want to switch between light and dark mode for the software, everything is possible in the options menu.</p>
+<a class="reference internal image-reference" href="_images/options_menu.png"><img alt="_images/options_menu.png" src="_images/options_menu.png" style="width: 400px;" /></a>
+<p>Using the “Réinitialiser” button permits going back to the default parameters anyway, so don’t be afraid to try a higher mean or a lower variance !</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Changing the parameters between two validations also works ! The algorithm will always apply the last parameters validated by the user.</p>
+</div>
+</section>
+</section>
+<section id="advanced-feature-filtre">
+<h2>Advanced feature: “Filtre”<a class="headerlink" href="#advanced-feature-filtre" title="Link to this heading"></a></h2>
+<div class="line-block">
+<div class="line">Felon Finder also has another feature : filters (called “Filtre”s in the software).</div>
+</div>
+<nav class="contents local" id="everything-you-need-to-know-on-filters">
+<p class="topic-title">Everything you need to know on filters</p>
+<ul class="simple">
+<li><p><a class="reference internal" href="#what-is-a-filtre-and-why-use-one" id="id9">What is a “Filtre” and why use one ?</a></p></li>
+<li><p><a class="reference internal" href="#first-example-the-sourire-filtre" id="id10">First example : the <em>sourire</em> “Filtre”</a></p></li>
+<li><p><a class="reference internal" href="#second-example-the-longs-cheveux-bruns-filtre" id="id11">Second example : the <em>longs cheveux bruns</em> “Filtre”</a></p></li>
+<li><p><a class="reference internal" href="#how-to-get-to-create-your-own-filtre" id="id12">How to get to create your own “Filtre” ?</a></p></li>
+<li><p><a class="reference internal" href="#in-depth-filtre-constructions-steps" id="id13">In-depth “Filtre” constructions steps</a></p></li>
+<li><p><a class="reference internal" href="#how-to-apply-a-filtre-on-the-generated-images" id="id14">How to apply a “Filtre” on the generated images ?</a></p></li>
+</ul>
+</nav>
+<section id="what-is-a-filtre-and-why-use-one">
+<h3>What is a “Filtre” and why use one ?<a class="headerlink" href="#what-is-a-filtre-and-why-use-one" title="Link to this heading"></a></h3>
+<div class="line-block">
+<div class="line">When the user has generated a face deemed satisfying with Felon Finder, it is possible to add details to match the image given by the application to the face the user is looking for.</div>
+</div>
+<div class="line-block">
+<div class="line">To do such a thing, the “Filtre” functionality comes in handy : a “Filtre” acts like a filter and is applied on top of the face to modify a specific detail without changing the rest of its characteristics. What detail is modified depends on the way the “Filtre” is constructed.</div>
+</div>
+<div class="line-block">
+<div class="line">Here are some illustrations of this functionality, with the pre-saved “Filtre”s already available in Felon Finder :</div>
+</div>
+</section>
+<section id="first-example-the-sourire-filtre">
+<h3>First example : the <em>sourire</em> “Filtre”<a class="headerlink" href="#first-example-the-sourire-filtre" title="Link to this heading"></a></h3>
+<div class="line-block">
+<div class="line">The <em>sourire</em> “Filtre” intends to add a smile on the generated faces.</div>
+</div>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><figure class="align-default" id="id1">
+<img alt="_images/before_smile.jpg" src="_images/before_smile.jpg" />
+<figcaption>
+<p><span class="caption-text">Fig 1 - <strong>Before using the filter</strong></span><a class="headerlink" href="#id1" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+<td><figure class="align-default" id="id2">
+<img alt="_images/after_smile.jpg" src="_images/after_smile.jpg" />
+<figcaption>
+<p><span class="caption-text">Fig 2. <strong>After using the filter</strong></span><a class="headerlink" href="#id2" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="second-example-the-longs-cheveux-bruns-filtre">
+<h3>Second example : the <em>longs cheveux bruns</em> “Filtre”<a class="headerlink" href="#second-example-the-longs-cheveux-bruns-filtre" title="Link to this heading"></a></h3>
+<div class="line-block">
+<div class="line">The <em>longs cheveux bruns</em> “Filtre” intends to add a long brown hair to the generated profiles.</div>
+</div>
+<table class="docutils align-default">
+<tbody>
+<tr class="row-odd"><td><figure class="align-default" id="id3">
+<img alt="_images/before_long_brown_hair.jpg" src="_images/before_long_brown_hair.jpg" />
+<figcaption>
+<p><span class="caption-text">Fig 1 - <strong>Before using the filter</strong></span><a class="headerlink" href="#id3" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+<td><figure class="align-default" id="id4">
+<img alt="_images/after_long_brown_hair.jpg" src="_images/after_long_brown_hair.jpg" />
+<figcaption>
+<p><span class="caption-text">Fig 2. <strong>After using the filter</strong></span><a class="headerlink" href="#id4" title="Link to this image"></a></p>
+</figcaption>
+</figure>
+</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="how-to-get-to-create-your-own-filtre">
+<h3>How to get to create your own “Filtre” ?<a class="headerlink" href="#how-to-get-to-create-your-own-filtre" title="Link to this heading"></a></h3>
+<div class="line-block">
+<div class="line">The user is the one constructing a “Filtre” and it allows close-to-unlimited customisation.</div>
+</div>
+<div class="line-block">
+<div class="line">To start, the user has to define what the “Filtre” has to modify. They may want to add a short blonde hair, add sunglasses, give more masculine traits to the faces… All of those are examples of possibilities given by the “Filtre”.</div>
+</div>
+<div class="line-block">
+<div class="line">Then, they can click on the “Créer un filtre” button which will prompt the filter creation menu.</div>
+</div>
+<a class="reference internal image-reference" href="_images/creer_un_filtre_1.png"><img alt="_images/creer_un_filtre_1.png" src="_images/creer_un_filtre_1.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="_images/creer_un_filtre_2.png"><img alt="_images/creer_un_filtre_2.png" src="_images/creer_un_filtre_2.png" style="width: 400px;" /></a>
+<div class="line-block">
+<div class="line">After clicking on the “Créer un filtre” button, the user can choose the number of steps they want to create the “Filtre” : between 1 and 10.</div>
+<div class="line">The more steps the user adds to the construction, the more fine-tuned the filter will be, but a “Filtre” with only 3 steps will also be very powerful if well constructed.</div>
+</div>
+</section>
+<section id="in-depth-filtre-constructions-steps">
+<h3>In-depth “Filtre” constructions steps<a class="headerlink" href="#in-depth-filtre-constructions-steps" title="Link to this heading"></a></h3>
+<div class="line-block">
+<div class="line">Suppose the user wants to create a “Filtre” that adds smiles.</div>
+</div>
+<div class="line-block">
+<div class="line">In each step of the “Filtre” construction, the user will have to choose an image bearing the desired characteristic (“image ressemblante” button) and an image lacking the desired characteristic (“image non ressemblante” button).</div>
+<div class="line">In our example, this will be <strong>“image ressemblante” = a smiling face</strong> and <strong>“image non ressemblante” = a neutral / sad face</strong>.</div>
+</div>
+<div class="line-block">
+<div class="line">The algorithm will make the “difference” between these two faces. The user’s choice of image is crucial because the algorithm has to understand with the following equation: <strong>“smiling face” - “neutral face” = “smile”</strong>.</div>
+</div>
+<div class="line-block">
+<div class="line">To achieve this, <strong>we recommend selecting faces that differ only in the desired characteristic</strong>.</div>
+<div class="line">In our example, it’s wiser to choose: <strong>“image ressemblante” = a smiling blond woman AND “image non ressemblante” = a neutral blond woman</strong>, rather than “image ressemblante” = a smiling blond woman AND “image non ressemblante” = a sad old bald man.</div>
+</div>
+<div class="line-block">
+<div class="line">If none of the images proposed by the application has the desired characteristic, it is always possible to reset the images using the “Aucune image” button until a satisfactory selection is found.</div>
+</div>
+<a class="reference internal image-reference" href="_images/filtre_aucune_image.png"><img alt="_images/filtre_aucune_image.png" src="_images/filtre_aucune_image.png" style="width: 400px;" /></a>
+<div class="line-block">
+<div class="line">Simply exit the filter creation menu with the “Quitter” button, and choose the newly created “Filtre” in the dropbox at the bottom left of the screen. We haven’t created the filters management menu but feel free to give us your suggestions on the felon-finder repo !</div>
+</div>
+<a class="reference internal image-reference" href="_images/filtre_leave.png"><img alt="_images/filtre_leave.png" src="_images/filtre_leave.png" style="width: 400px;" /></a>
+<a class="reference internal image-reference" href="_images/filtre_created.png"><img alt="_images/filtre_created.png" src="_images/filtre_created.png" style="width: 400px;" /></a>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>This feature might be inconsistent sometimes. You may have to enter and leave the “Filtre” menu once again to have your newly created filter shown in the list. The best option if that does not do is to restart the software.</p>
+</div>
+</section>
+<section id="how-to-apply-a-filtre-on-the-generated-images">
+<h3>How to apply a “Filtre” on the generated images ?<a class="headerlink" href="#how-to-apply-a-filtre-on-the-generated-images" title="Link to this heading"></a></h3>
+<div class="line-block">
+<div class="line">Select a “Filtre” in the dropbox at the bottom left of the screen and continue using Felon Finder as explained in the initial tutorial.</div>
+</div>
+<a class="reference internal image-reference" href="_images/filtre_presaved.png"><img alt="_images/filtre_presaved.png" src="_images/filtre_presaved.png" style="width: 400px;" /></a>
+<div class="line-block">
+<div class="line">To apply no “Filtre”, which is the default behavior of Felon Finder, click on “None”.</div>
+</div>
+<a class="reference internal image-reference" href="_images/filtre_none.png"><img alt="_images/filtre_none.png" src="_images/filtre_none.png" style="width: 400px;" /></a>
+</section>
+</section>
+<section id="non-exhaustive-list-of-questions">
+<h2>Non-exhaustive list of questions<a class="headerlink" href="#non-exhaustive-list-of-questions" title="Link to this heading"></a></h2>
+<section id="does-felon-finder-guarantee-100-accurate-identification-of-an-assailant">
+<h3>Does Felon Finder guarantee 100% accurate identification of an assailant ?<a class="headerlink" href="#does-felon-finder-guarantee-100-accurate-identification-of-an-assailant" title="Link to this heading"></a></h3>
+<p>Felon Finder is an <strong>identification aid tool</strong> and <strong>cannot</strong> guarantee 100% accurate identification. However, it can greatly facilitate the identification process by providing detailed composite sketches based on your descriptions and memories.</p>
+</section>
+<section id="how-are-the-composite-sketches-produced">
+<h3>How are the composite sketches produced ?<a class="headerlink" href="#how-are-the-composite-sketches-produced" title="Link to this heading"></a></h3>
+<p>The images selected by the user are encoded using a <strong>variational autoencoder</strong>. Modifications inspired by <strong>genetic mutations and crossovers</strong> are then applied to the encoded images. After these modifications, the images are decoded and returned to the user.</p>
+</section>
+<section id="i-found-my-assailant">
+<h3>I found my assailant !<a class="headerlink" href="#i-found-my-assailant" title="Link to this heading"></a></h3>
+<p>If you have identified the perfect composite sketch of your assailant among the produced files, select their image, press the “Enregistrer” button, and let the authorities do the rest of the work.</p>
+</section>
+<section id="can-i-apply-the-modifications-to-more-than-one-picture">
+<h3>Can I apply the modifications to more than one picture ?<a class="headerlink" href="#can-i-apply-the-modifications-to-more-than-one-picture" title="Link to this heading"></a></h3>
+<p>Every aspect of Felon Finder is made to work with the amount of pictures you want, from 1 to 4. When you select 1, 2, or 4 pictures, the software uses them to the best extent. When you save 4 pictures, the 4 of them will be saved in your chosen folder. It is the same with filters.</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="quickstartguide.html" class="btn btn-neutral float-left" title="Installation guide" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="modules.html" class="btn btn-neutral float-right" title="Modules" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2024, Alexandre Layous, Chada Salek and Audrey Zarkua.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
