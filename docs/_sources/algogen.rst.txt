@@ -1,8 +1,0 @@
-algogen module
-==============
-This module contains the whole implementation of Felon Finder's genetic algorithm. This is truly part of the heart of Felon Finder.
-
-.. automodule:: algogen
-   :members:
-   :undoc-members:
-   :show-inheritance:
